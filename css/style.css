@@ -1,0 +1,175 @@
+body {
+margin: 0;
+background-color: #080b14; 
+color: white ;
+font-size: medium;
+font-family: Arial, sans-serif;
+min-height: 100vh; /*Die Seite ist mindestens so hoch wie der Browserfenster.*/
+display:grid; /*Ordnet die Elemente in einem Raster an,.*/
+grid-template-rows: auto 1fr auto; /*Erstellt drei Zeilen, wobei die mittlere den übrigen Platz einnimmt.*/
+}
+
+img {
+    height: 300px;
+    max-width: 100%; /*Begrenzt die Breite auf höchstens 100 % des verfügbaren Platzes.*/
+}
+
+video {
+    width: 600px;
+    max-width: 100%;
+    height: auto; /*Berechnet die Höhe automatisch.*/
+}
+
+strong {
+    color: #7dd3fc;
+}
+
+em {
+    color: #fbbf24;
+}
+
+table {
+    border-collapse: collapse; /*Fasst benachbarte Tabellenrahmen zu gemeinsamen Linien zusammen.*/
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #39465e;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #1c304d;
+}
+
+tr:nth-child(even) { /*nth-child(even) wählt jedes zweite Element anhand seiner Position aus.*/
+    background-color: #141e30;
+}
+
+.quelle {
+    font-size: 10px;
+    color: #aeb8c8;
+    overflow-wrap: anywhere; /*Erlaubt Zeilenumbrüche innerhalb langer Wörter oder Links.*/
+    display:block /*Stellt das Element als eigenen Block dar.*/
+}
+
+.hauptmenue {
+    display: flex; /*Ordnet Elemente flexibel nebeneinander oder untereinander an.*/
+    justify-content: space-between; /*Verteilt Elemente mit möglichst viel Platz dazwischen.*/
+    align-items: center; /*Richtet Elemente auf der Querachse mittig aus.*/
+    padding: 20px 8%;
+    background-color: #101725;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.logo-symbol {
+    font-size: 32px;
+    margin-right: 8px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px; /*Legt den Abstand zwischen den Elementen fest.*/
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover { /*hover wendet CSS-Regeln an, wenn sich die Maus über einem Element befindet.*/
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #101725;
+    margin-top: 60px;
+    padding: 30px 8%;
+}
+
+.footer-inhalt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.footer-logo:visited{ /*Gestaltet einen Link, der bereits besucht wurde.*/
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-links a{
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #b8bec9;
+}
+
+.nasa-box {
+    background-color: #141e30;
+    border: 1px solid #39465e;
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 30px;
+    max-width: 800px;
+}
+
+.nasa-box a{ /*Wählt alle Links innerhalb der Klasse nasa-box aus.*/
+    color: #7dd3fc;
+    font-weight: bold;
+}
+
+@media (max-width: 786px) { /*Wendet die folgenden Regeln bei einer Bildschirmbreite von höchstens 786 Pixeln an.*/
+    .hauptmenue {
+        flex-direction: column; /*Ordnet die Flexbox-Elemente untereinander an.*/
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap; /*Erlaubt Flexbox-Elementen, in die nächste Zeile zu wechseln.*/
+        justify-content: center; /*Zentriert die Elemente entlang der Hauptachse.*/
+    }
+
+    .footer-inhalt {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.tabellen-container {
+    overflow-x: auto; /*Ermöglicht bei Bedarf das seitliche Scrollen der Tabelle.*/
+}
